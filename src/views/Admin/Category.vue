@@ -10,12 +10,15 @@
 
 <script>
 export default {
-  name: "Lifecycle",
   data () {
     return {
       message: "hello",
       text: '',
+      
     }
+  },
+  mounted() {
+
   },
 }
 </script>
