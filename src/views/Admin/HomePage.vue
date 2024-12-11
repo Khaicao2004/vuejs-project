@@ -4,8 +4,8 @@
     <div class="row p-4">
       <div class="col-12"><Header/></div>
     </div>
+    <RouterView />
   </div>
-  <RouterView />
 </template>
 
 <!--  JS-->
