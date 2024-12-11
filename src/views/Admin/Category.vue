@@ -14,17 +14,8 @@ export default {
   data () {
     return {
       message: "hello",
-      create: '',
+      text: '',
     }
-  },
-  beforeCreate() {
-    this.message = "xin chao"
-    this.message2 = "xin chao";
-  },
-  created() {
-    console.log(this.message);
-    console.log(this.message2);
-    this.create = "xin chao"
   },
 }
 </script>

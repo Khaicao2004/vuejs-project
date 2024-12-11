@@ -13,13 +13,18 @@ const router = createRouter({
           name: 'dashboard',
           component: () => import('../views/Admin/Dashboard.vue'),
         },{
-          path: 'categories',
+          path: 'categories/',
           name: 'categories',
           component: () => import('../views/Admin/Category.vue'),
         },{
           path: 'accounts',
           name: 'accounts',
           component: () => import('../views/Admin/Account.vue'),
+        },
+        {
+          path: 'accounts/:id',
+          name: 'accounts-detail',
+          component: () => import('../views/Admin/AccountDetail.vue'),
         },
       ]
     },
