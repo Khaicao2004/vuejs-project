@@ -1,6 +1,9 @@
 <template>
       <h1 class="text-center">Danh sách người dùng</h1>
       <div class="p-4">
+        <RouterLink :to="{ name: 'accounts-create' }" class="btn btn-primary">Create</RouterLink>
+      </div>
+      <div class="p-4" v-if="users.length">
           <table class="table table-bordered text-center">
               <thead>
                   <tr>
@@ -11,17 +14,19 @@
                   </tr>
               </thead>
               <tbody>
-                  <tr v-for="list in users">
+                  <tr v-for="list in users" :key="list.id">
                       <td>{{ list.id }}</td>
                       <td>{{ list.name }}</td>
                       <td>{{ list.email }}</td>
                       <td>
-                         <RouterLink :to="{ name: 'accounts-detail', params: {id: list.id , query: { keyWord: 'khai' }}}">Detail</RouterLink>
+                         <RouterLink :to="{ name: 'accounts-detail', params: {id: list.id} }" class="text-decoration-none text-white btn btn-primary">Detail</RouterLink>
+                        <button @click="deleteUser(list.id)" class="btn btn-danger mx-2">Delete</button>
                       </td>
                   </tr>
               </tbody>
           </table>
       </div>
+      <div class="" v-else>No data</div>
   </template>
   
   <script>
@@ -32,6 +37,7 @@ import {  RouterLink } from "vue-router";
     data() {
       return {
         users: [], // Dữ liệu danh sách người dùng
+        loading: true
       };
     },
     created() {
@@ -39,17 +45,24 @@ import {  RouterLink } from "vue-router";
       this.fetchUsers();
     },
     methods: {
+      
       async fetchUsers() {
         try {
           const response = await axios.get(
             "http://localhost:3000/users"
-          );
-          this.users = response.data;
+          );  
+            this.users = response.data;
         } catch (error) {
           console.error("Lỗi khi gọi API:", error);
         }
       },
-    },
+      async deleteUser(id){
+        console.log(id);      
+       await axios.delete( `http://localhost:3000/users/${id}`);
+       this.users = this.users.filter((user) => user.id !== id); 
+      }
+
+},
     mounted() {
         
     },

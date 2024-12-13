@@ -2,8 +2,9 @@
 <template>
   <div class="container-fluid">
     <div class="row p-4">
-      <div class="col-12"><Header/></div>
+      <div class="col-12"><Header :message="parentsMs"/></div>
     </div>
+
     <RouterView />
   </div>
 </template>
@@ -23,7 +24,7 @@ export default {
   data() {
     return {
       count: 0,
-      message: "hello",
+      parentsMs: "hello",
       text: "",
     };
   },

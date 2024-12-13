@@ -6,25 +6,37 @@ const router = createRouter({
     {
       path: '/admin',
       name: 'admin',
-      component: () => import('../views/Admin/HomePage.vue'),
+      component: () => import('../views/admin/HomePage.vue'),
       children: [
         {
           path: '',
           name: 'dashboard',
-          component: () => import('../views/Admin/Dashboard.vue'),
-        },{
-          path: 'categories/',
+          component: () => import('../views/admin/Dashboard.vue'),
+        },
+        {
+          path: 'categories',
           name: 'categories',
-          component: () => import('../views/Admin/Category.vue'),
-        },{
+          component: () => import('../views/admin/Category.vue'),
+        },
+        {
           path: 'accounts',
           name: 'accounts',
-          component: () => import('../views/Admin/Account.vue'),
+          component: () => import('../views/admin/users/Account.vue'),
         },
         {
           path: 'accounts/:id',
           name: 'accounts-detail',
-          component: () => import('../views/Admin/AccountDetail.vue'),
+          component: () => import('../views/admin/users/AccountDetail.vue'),
+        }, 
+        {
+          path: 'test',
+          name: 'test',
+          component: () => import('../views/admin/Test.vue'),
+        },
+        {
+          path: 'accounts/create',
+          name: 'accounts-create',
+          component: () => import('../views/admin/users/Create.vue'),
         },
       ]
     },
