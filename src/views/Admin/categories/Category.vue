@@ -1,8 +1,8 @@
 <template>
   <h1 class="text-center">Danh sách danh mục</h1>
-  <input v-model="inputValue">
-    <p>Input Value: {{ inputValue }}</p>
-    <input v-model="inputValue">
+  <div class="p-4">
+        <RouterLink :to="{ name: 'categories-create' }" class="btn btn-primary">Create</RouterLink>
+  </div>
   <div class="p-4" v-if="categories.length">
       <table class="table table-bordered text-center">
           <thead>
@@ -41,7 +41,7 @@ methods: {
   async fetchCategories() {
     try {
       const response = await axios.get(
-        "http://localhost:3000/categories"
+        "http://127.0.0.1:8000/api/categories"
       );  
         this.categories = response.data;
     } catch (error) {

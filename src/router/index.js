@@ -16,7 +16,7 @@ const router = createRouter({
         {
           path: 'categories',
           name: 'categories',
-          component: () => import('../views/admin/Category.vue'),
+          component: () => import('../views/admin/categories/Category.vue'),
         },
         {
           path: 'accounts',
@@ -37,6 +37,11 @@ const router = createRouter({
           path: 'accounts/create',
           name: 'accounts-create',
           component: () => import('../views/admin/users/Create.vue'),
+        },
+        {
+          path: 'categories/create',
+          name: 'categories-create',
+          component: () => import('../views/admin/categories/Create.vue'),
         },
       ]
     },
