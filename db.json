@@ -1,20 +1,33 @@
 {
-    "users": [
-      {
-        "id": 1,
-        "name": "Cao Khai",
-        "email": "khai1234ff@gmail.com"
-      },
-      {
-        "id": 2,
-       "name": "Cao Lang",
-        "email": "khai1234gg@gmail.com"
-      },
-      {
-        "id": 3,
-        "name": "Handle",
-        "email": "khai1234cc@gmail.com"
-      }
-    ]
-  }
-  
+  "users": [
+    {
+      "id": "1",
+      "name": "Cao Khai",
+      "email": "khai1234ff@gmail.com"
+    },
+    {
+      "id": "2",
+      "name": "Cao Lang",
+      "email": "khai1234gg@gmail.com"
+    },
+    {
+      "id": "3",
+      "name": "Handle",
+      "email": "khai1234cc@gmail.com"
+    }
+  ],
+  "categories": [
+    {
+      "id": "1",
+      "name": "Danh muc 1"
+    },
+    {
+      "id": "2",
+      "name": "Danh muc 2"
+    },
+    {
+      "id": "3",
+      "name": "Danh muc 3"
+    }
+  ]
+}
