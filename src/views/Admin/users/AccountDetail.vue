@@ -35,8 +35,7 @@ export default {
     };
   },
   created() {
-    const id = this.$route.params.id;
-    this.fetchUserDetail(id);
+   
   },
   methods: {
     async fetchUserDetail(id) {
@@ -44,6 +43,9 @@ export default {
       this.userDetail = response.data;
     },
   },
-  mounted() {},
+  mounted() {
+    const id = this.$route.params.id;
+    this.fetchUserDetail(id);
+  },
 };
 </script>

@@ -30,7 +30,8 @@
   </template>
   
   <script>
-  import axios from "axios";
+  import instanceAxios from "@/utils/configAxios";
+import axios from "axios";
 import {  RouterLink } from "vue-router";
   
   export default {
@@ -42,15 +43,12 @@ import {  RouterLink } from "vue-router";
     },
     created() {
       // Gọi API ngay khi component được khởi tạo
-      this.fetchUsers();
     },
     methods: {
       
       async fetchUsers() {
         try {
-          const response = await axios.get(
-            "http://localhost:3000/users"
-          );  
+          const response = await instanceAxios.get('users');
             this.users = response.data;
         } catch (error) {
           console.error("Lỗi khi gọi API:", error);
@@ -64,7 +62,7 @@ import {  RouterLink } from "vue-router";
 
 },
     mounted() {
-        
+      this.fetchUsers();
     },
   };
   </script>

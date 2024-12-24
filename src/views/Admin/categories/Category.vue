@@ -34,8 +34,7 @@ data() {
   };
 },
 created() {
-  // Gọi API ngay khi component được khởi tạo
-  this.fetchCategories();
+ 
 },
 methods: {
   async fetchCategories() {
@@ -50,7 +49,7 @@ methods: {
   },
 },
 mounted() {
-    
+  this.fetchCategories();
 },
 };
 </script>

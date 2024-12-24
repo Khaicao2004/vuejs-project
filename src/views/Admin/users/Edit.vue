@@ -35,8 +35,7 @@
       };
     },
     created() {
-      const id = this.$route.params.id;
-      this.fetchUserDetail(id);
+    
     },
     methods: {
       async fetchUserDetail(id) {
@@ -44,7 +43,10 @@
         this.userDetail = response.data;
       },
     },
-    mounted() {},
+    mounted() {
+      const id = this.$route.params.id;
+      this.fetchUserDetail(id);
+    },
   };
   </script>
   
