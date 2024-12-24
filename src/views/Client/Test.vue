@@ -11,7 +11,8 @@
                     <th>STT</th>
                     <th>Name</th>
                     <th>Status</th>
-                    <th>Action</th>
+                    <th>Change</th>
+                    <th>Delete</th>
                 </tr>
             </thead>
             <tbody>
@@ -23,10 +24,9 @@
                         <div class="d-flex justify-content-center gap-4">
                             <button type="button" class="btn btn-primary" @click="inprogress(index)" :disabled="!task.completed">In Progress</button>
                             <button type="button" class="btn btn-success" @click="resolved(index)" :disabled="task.completed">Resolved</button>
-                            <button type="button" class="btn btn-danger" @click="removeTask(index)">Delete</button>
                         </div>
                     </td>
-                  
+                  <td><button type="button" class="btn btn-danger" @click="removeTask(index)">Delete</button></td>
                 </tr>
             </tbody>
         </table>
