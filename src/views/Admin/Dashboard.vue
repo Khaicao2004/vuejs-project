@@ -15,9 +15,9 @@
             id: 'kahahah',
             isButtonDisabled: false,
             objectOfAttrs: {
-            id: 'container',
-            class: 'wrapper'
-    }
+               id: 'container',
+               class: 'wrapper'
+            }
          }
       },
       methods: {
