@@ -1,7 +1,7 @@
 <template>
     <div>
         <input type="number" v-model="kilometers" placeholder="kilometers" class="mt-5 mx-5">
-        <p class="mx-5 mt-2">Milimeters: {{ milimetersValue  }} MM</p>
+        <p class="mx-5 mt-2">Milimeters: {{ milimetersValue }} MM</p>
     </div>
     <div class="">
         <input type="number" v-model="milimeters" placeholder="milimeters" class="mt-3 mx-5">
