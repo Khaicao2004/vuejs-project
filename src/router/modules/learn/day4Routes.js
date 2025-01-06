@@ -14,4 +14,9 @@ export default [
         name: 'unit13',
         component: () => import('@/views/learn/day4/Unit13.vue'),
     },
+    {
+        path: 'unit14',
+        name: 'unit14',
+        component: () => import('@/views/learn/day4/Unit14.vue'),
+    },
 ]
