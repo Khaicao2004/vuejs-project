@@ -1,5 +1,5 @@
 <template>
-<h1 class="text-center">Unit21</h1>˜˜
+<h1 class="text-center">Unit21</h1>
 <div class="p-4">
     <input type="text" v-model="searchQuery" class="mb-2">
     <div class="d-flex gap-3 mb-2">
@@ -32,7 +32,7 @@ import { computed, ref } from 'vue';
     const showUnderPrice = ref(false);
     const products = ref([
         {name: 'Điện thoại', price: 100000},
-        {name: 'Laptop', price: 190000},
+        {name: 'Laptop', price: 190000},    
         {name: 'Macbook', price: 160000},
         {name: 'Chuột máy tính', price: 100000},
         {name: 'Bàn phím', price: 90000},
